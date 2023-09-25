@@ -1,0 +1,282 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --gray: #eceff1;
+    --word: #b2b4ba;
+    --blue: #00b0ff;
+}
+
+body {
+    background-image: url('https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk4MDE5NjQxOTMzNTcxMjMz/night-quotes-and-caption-ideas.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: 100vh; */
+    width: 100%;
+}
+
+
+/* container */
+.container {
+    margin: 100px auto;
+    width: 70%;
+    height: 550px;
+    background-color: white;
+    display: flex;
+}
+
+
+/* sidebar */
+
+.container .sidebar {
+    width: 65%;
+
+}
+
+.container .sidebar .nav {
+    display: flex;
+    padding: 20px 20px 5px 20px;
+    justify-content: space-between;
+}
+
+.container .sidebar .input input {
+    padding: 15px;
+    width: 150px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--gray);
+}
+
+.container .sidebar .input input:focus-visible {
+    outline: none;
+}
+
+.container .sidebar .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.container .sidebar .icon i {
+    font-size: 22px;
+}
+
+/* chats */
+
+
+.container .sidebar .chats .chat {
+    padding: 0 20px;
+    position: relative;
+    /* margin-bottom: 20px; */
+    /* padding-bottom: 5px; */
+}
+
+.container .sidebar .chats hr {
+    border: none;
+    height: 0.5px;
+    background-color: var(--gray);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.container .sidebar .chats .chat .img img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.container .sidebar .chats .chat .name {
+    position: absolute;
+    left: 65px;
+    top: 13px;
+    font-size: 12px;
+}
+
+.container .sidebar .chats .chat .p {
+    position: absolute;
+    left: 67px;
+    top: 30px;
+    font-size: 10px;
+    color: var(--word);
+}
+
+.container .sidebar .chats .chat .time {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    font-size: 10px;
+    color: var(--word);
+}
+
+.container .sidebar .chats .chat:last-child {
+    background-color: var(--blue);
+    color: white;
+    padding-bottom: 10px;
+}
+
+.container .sidebar .chats .chat:last-child .p {
+    color: white;
+}
+
+.container .sidebar .chats .chat:last-child .time {
+    color: white;
+}
+
+.container .sidebar .chats .chat:last-child hr {
+    background-color: var(--blue);
+}
+
+
+/* content */
+
+.container .content {
+    /* background-color: blue; */
+    width: 100%;
+    border-left: 1px solid var(--gray);
+}
+
+.container .content .nav {
+    background-color: var(--gray);
+    padding: 15px;
+    font-size: 10px;
+}
+
+.container .content .nav span:first-child {
+    color: var(--word);
+    font-weight: bold;
+}
+
+.container .content .nav span:last-child {
+    font-weight: bold;
+}
+
+/* masseges */
+
+.container .content .masseges {
+    padding: 25px 20px;
+    /* background-color: lightblue; */
+    height: 92.6%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.container .content .masseges .input {
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    font-size: 15px;
+}
+
+.container .content .masseges .input input {
+    border: none;
+    background-color: var(--gray);
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+}
+
+.container .content .masseges .input .emoji {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 35px;
+}
+
+.container .content .masseges .input .sned {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.container .content .masseges .input .data {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+.container .content .masseges .massege {
+    margin: 5px;
+}
+
+.container .content .masseges .massege p {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.container .content .masseges .massege.right {
+    direction: rtl;
+    position: relative;
+}
+
+.container .content .masseges .massege.right::after {
+    position: absolute;
+    content: '';
+    border: 5px solid var(--gray);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+}
+
+.container .content .masseges .massege.left {
+    position: relative;
+}
+
+.container .content .masseges .massege.left::after {
+    position: absolute;
+    content: '';
+    border: 5px solid var(--blue);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;
+}
+
+.container .content .masseges .massege.left p {
+    color: white;
+    background-color: var(--blue);
+}
+
+.container .content .masseges .massege.right p {
+    background-color: var(--gray);
+}
+
+.container .content .masseges .line {
+    height: 1px;
+    background-color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.container .content .masseges .time {
+    color: var(--word);
+    position: absolute;
+    /* z-index: 5; */
+    top: 156px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    background-color: white;
+    padding: 0 20px;
+}
